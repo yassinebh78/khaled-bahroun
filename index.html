@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khaled Bahroun — Formateur Expert en énergétique</title>
+<meta name="description" content="Khaled Bahroun, formateur expert en énergétique, froid commercial, climatisation, photovoltaïque et maintenance des équipements de cuisines professionnelles et hôtelières à Djerba, Tunisie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --surface:#ffffff;
+  --surface-2:#e8e9eb;
+  --text:#2f3142;
+  --text-soft:rgba(47,49,66,.65);
+  --muted:rgba(47,49,66,.5);
+  --border:#e4e5e8;
+  --accent:#365cf5;
+  --accent-soft:#eaeeff;
+  --dark:#2f3142;
+  --radius:4px;
+  --shadow:0 20px 50px -30px rgba(47,49,66,.5);
+  --maxw:1180px;
+}
+html[data-theme="dark"]{
+  --bg:#1a1b24;
+  --surface:#22232f;
+  --surface-2:#1f2029;
+  --text:#f2f3f7;
+  --text-soft:rgba(242,243,247,.68);
+  --muted:rgba(242,243,247,.45);
+  --border:#32333f;
+  --accent:#5c7cff;
+  --accent-soft:#242a44;
+  --dark:#0f1017;
+  --shadow:0 20px 50px -25px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+section[id],[id]{scroll-margin-top:90px}
+body{
+  font-family:'Poppins',system-ui,sans-serif;
+  background:var(--bg);color:var(--text-soft);
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+  transition:background .3s,color .3s;
+}
+h1,h2,h3,h4,h5,.brand{font-family:'Poppins',sans-serif;color:var(--text);line-height:1.2}
+h1,h2{font-weight:800}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:100px 0}
+
+/* section headings — match reference */
+.eyebrow{
+  display:inline-block;font-size:.8rem;letter-spacing:.02em;font-weight:600;
+  color:var(--accent);margin-bottom:12px;position:relative;padding-left:34px;
+}
+.eyebrow::before{content:"";position:absolute;left:0;top:50%;width:24px;height:2px;background:var(--accent)}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .eyebrow{padding-left:0}
+.sec-head.center .eyebrow::before{display:none}
+.sec-head h2{font-size:clamp(2rem,4.4vw,2.9rem);letter-spacing:-.01em}
+.sec-head h2 span{color:var(--accent)}
+.sec-head p{margin-top:16px;font-size:1.02rem}
+
+/* buttons — dark #2f3142, 4px radius */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;font-family:'Poppins';font-weight:600;font-size:.92rem;
+  padding:15px 40px;border-radius:var(--radius);cursor:pointer;border:2px solid transparent;transition:.25s;
+}
+.btn-primary{background:var(--dark);color:#fff}
+.btn-primary:hover{background:var(--accent)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--dark)}
+.btn-outline{border-color:currentColor;color:var(--text)}
+.btn-outline:hover{background:var(--dark);color:#fff;border-color:var(--dark)}
+.btn-light{background:#fff;color:var(--dark)}
+.btn-light:hover{background:var(--accent);color:#fff}
+
+/* nav */
+header{
+  position:sticky;top:0;z-index:100;background:var(--bg);
+  border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s;
+}
+header.scrolled{border-color:var(--border);box-shadow:0 6px 26px -20px rgba(47,49,66,.6)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1.02rem;letter-spacing:.06em;text-transform:uppercase}
+.brand .mark{
+  width:40px;height:40px;border-radius:6px;display:grid;place-items:center;
+  background:var(--accent);color:#fff;font-weight:800;font-size:.9rem;letter-spacing:.02em;
+}
+.brand b{color:var(--text);font-weight:800}
+.brand em{font-style:normal;color:var(--text-soft);font-weight:500}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{
+  padding:10px 15px;font-size:.9rem;font-weight:500;color:var(--text-soft);transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.icon-btn{
+  width:44px;height:44px;border-radius:6px;border:1px solid var(--border);background:var(--surface);
+  display:grid;place-items:center;cursor:pointer;color:var(--text-soft);transition:.2s;
+}
+.icon-btn:hover{color:var(--accent);border-color:var(--accent)}
+.menu-toggle{display:none}
+
+/* hero */
+.hero{
+  position:relative;min-height:calc(100vh - 78px);display:grid;place-items:center;text-align:center;
+  color:#fff;overflow:hidden;padding:80px 0;
+  background:linear-gradient(150deg,#2f3142 0%,#20222e 55%,#171821 100%);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay;
+  background:
+    radial-gradient(circle at 20% 30%,#365cf5,transparent 40%),
+    radial-gradient(circle at 80% 70%,#7d93ff,transparent 45%),
+    repeating-linear-gradient(45deg,rgba(255,255,255,.06) 0 2px,transparent 2px 26px);
+}
+.hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.hero .avatar{
+  width:290px;height:290px;border-radius:50%;overflow:hidden;position:relative;
+  border:6px solid rgba(255,255,255,.14);box-shadow:0 30px 70px -30px rgba(0,0,0,.7);
+  background:#20222e url('images/khaled-portrait.png') center 15%/cover no-repeat;
+}
+.hero .avatar .initials{font-weight:800;font-size:6rem;color:rgba(255,255,255,.95);letter-spacing:.02em}
+.hero .kicker{margin-top:40px;font-size:.85rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.hero h1{
+  font-size:clamp(2.6rem,8vw,5.2rem);font-weight:800;color:#fff;letter-spacing:.01em;
+  text-transform:uppercase;margin:14px 0 6px;line-height:1.02;
+}
+.hero .role{font-size:clamp(1rem,2.4vw,1.35rem);color:rgba(255,255,255,.8);font-weight:500;max-width:640px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px}
+.scroll-ind{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:1;color:rgba(255,255,255,.7);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.about-portrait{
+  position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;
+  background:#2f3142 url('images/khaled-portrait.png') center 12%/cover no-repeat;display:grid;place-items:center;box-shadow:var(--shadow);
+}
+.about-portrait .initials{font-weight:800;font-size:5rem;color:rgba(255,255,255,.9)}
+.about-portrait .exp-badge{
+  position:absolute;left:20px;bottom:20px;background:#fff;color:var(--dark);border-radius:6px;
+  padding:14px 20px;box-shadow:var(--shadow);text-align:center;
+}
+.about-portrait .exp-badge b{display:block;font-size:1.8rem;font-weight:800;color:var(--accent);line-height:1}
+.about-portrait .exp-badge span{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.about-text p{margin-bottom:16px}
+.about-info{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin:26px 0}
+.about-info .row{display:flex;flex-direction:column;padding:10px 0;border-bottom:1px solid var(--border)}
+.about-info .k{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.about-info .v{font-weight:600;color:var(--text);font-size:.95rem}
+
+/* services */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:36px 30px;
+  transition:transform .25s,box-shadow .25s;position:relative;
+}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.card .num{position:absolute;top:26px;right:30px;font-size:2.2rem;font-weight:800;color:var(--border)}
+.card .ic{
+  width:64px;height:64px;border-radius:8px;display:grid;place-items:center;margin-bottom:22px;
+  background:var(--accent-soft);color:var(--accent);
+}
+.card .ic svg{width:30px;height:30px}
+.card h3{font-size:1.18rem;font-weight:700;margin-bottom:10px}
+.card p{font-size:.94rem}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 50px}
+.skill .top{display:flex;justify-content:space-between;margin-bottom:10px;font-weight:600;color:var(--text);font-size:.96rem}
+.skill .top span:last-child{color:var(--accent)}
+.bar{height:8px;border-radius:2px;background:var(--surface-2);overflow:hidden}
+html[data-theme="dark"] .bar{background:#2b2c38}
+.bar > i{display:block;height:100%;border-radius:2px;background:var(--accent);width:0;transition:width 1.3s cubic-bezier(.16,1,.3,1)}
+
+/* timeline */
+.timeline-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.tl-col h3{font-size:1.35rem;font-weight:700;margin-bottom:30px;display:flex;align-items:center;gap:12px}
+.tl-col h3 .ic{width:44px;height:44px;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center}
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--border)}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{content:"";position:absolute;left:-32px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.tl-item .when{display:inline-block;font-size:.74rem;font-weight:600;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;background:var(--accent-soft);padding:3px 10px;border-radius:3px}
+.tl-item h4{font-size:1.05rem;font-weight:700;margin:9px 0 3px}
+.tl-item .where{font-size:.9rem}
+
+/* formations */
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.form-item{
+  background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:22px 24px;
+  display:flex;gap:18px;align-items:flex-start;transition:.2s}
+.form-item:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.form-item .yr{flex:none;background:var(--accent);color:#fff;font-weight:700;font-size:.78rem;padding:7px 12px;border-radius:4px;white-space:nowrap}
+.form-item .txt b{display:block;color:var(--text);font-weight:600;font-size:.97rem;margin-bottom:3px}
+.form-item .txt span{color:var(--muted);font-size:.85rem}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.tile{
+  border-radius:8px;overflow:hidden;position:relative;aspect-ratio:1/1.18;color:#fff;
+  display:flex;align-items:flex-end;padding:22px;box-shadow:var(--shadow);
+}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(20,22,34,.9))}
+.tile:hover::before{transform:scale(1.08)}
+.tile .cap{position:relative;z-index:1}
+.tile .cap b{display:block;font-weight:700;font-size:1.02rem}
+.tile .cap span{font-size:.8rem;opacity:.85}
+.t1{background:#20223a url('images/froid-chambres-froides.png') center 20%/cover no-repeat}
+.t2{background:#2f3142 url('images/climatisation.png') 38% 45%/cover no-repeat}
+.t3{background:#0b2a6b url('images/cuisines-professionnelles.png') center 35%/cover no-repeat}
+.t4{background:#2f3142 url('images/photovoltaique.png') center 35%/cover no-repeat}
+.realis{margin-top:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:34px}
+.realis h3{font-size:1.2rem;font-weight:700;margin-bottom:20px}
+.realis ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px}
+.realis li{display:flex;gap:12px;font-size:.93rem;align-items:flex-start}
+.realis li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-top:10px}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}
+.contact-info .cline{display:flex;gap:18px;align-items:center;margin-bottom:24px}
+.contact-info .cline .ic{width:54px;height:54px;flex:none;border-radius:8px;background:var(--accent);color:#fff;display:grid;place-items:center}
+.contact-info .cline b{display:block;color:var(--text);font-weight:700;font-size:1rem}
+.contact-info .cline a,.contact-info .cline span{font-size:.95rem}
+.contact-info .cline a:hover{color:var(--accent)}
+form{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:36px;box-shadow:var(--shadow)}
+.field{margin-bottom:18px}
+.field label{display:block;color:var(--text);font-size:.85rem;font-weight:600;margin-bottom:8px}
+.field input,.field textarea{
+  width:100%;padding:14px 16px;border-radius:4px;border:1px solid var(--border);background:var(--bg);
+  color:var(--text);font-family:inherit;font-size:.95rem;transition:border-color .2s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
+.field textarea{resize:vertical;min-height:130px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-note{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+/* footer */
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:40px 0}
+html[data-theme="dark"] footer{border-top:1px solid var(--border)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.9rem}
+.socials{display:flex;gap:10px}
+.socials a{width:42px;height:42px;border-radius:6px;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;color:#fff;transition:.2s}
+.socials a:hover{background:var(--accent);border-color:var(--accent)}
+
+/* pinned contact button */
+.fab{
+  position:fixed;right:24px;bottom:24px;z-index:200;display:inline-flex;align-items:center;gap:9px;
+  font-family:'Poppins';font-weight:600;font-size:.92rem;padding:15px 26px;border-radius:4px;
+  color:#fff;background:var(--accent);box-shadow:0 16px 34px -12px var(--accent);cursor:pointer;transition:.25s;
+}
+.fab:hover{background:var(--dark);transform:translateY(-3px)}
+.fab svg{width:18px;height:18px}
+@media(max-width:560px){.fab{right:16px;bottom:16px;padding:15px}.fab .fab-txt{display:none}}
+
+.reveal{opacity:1;transform:none}
+html.js-ready .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+html.js-ready .reveal.in{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .about-grid,.timeline-wrap,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .grid-3,.skills-grid,.form-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .realis ul{grid-template-columns:1fr}
+  .about-portrait{max-width:360px}
+  .nav-links{
+    position:fixed;inset:78px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
+    background:var(--surface);border-bottom:1px solid var(--border);padding:12px 24px 20px;
+    transform:translateY(-140%);transition:transform .3s;box-shadow:var(--shadow)}
+  .nav-links.open{transform:none}
+  .nav-links a{padding:14px 8px;border-bottom:1px solid var(--border)}
+  .menu-toggle{display:grid}
+}
+@media(max-width:560px){
+  .gallery{grid-template-columns:1fr}.two{grid-template-columns:1fr}.about-info{grid-template-columns:1fr}
+  section{padding:70px 0}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <span class="mark">KB</span>
+      <span><b>KHALED</b> <em>BAHROUN</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#competences">Compétences</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" aria-label="Changer de thème" title="Thème clair / sombre">
+        <svg id="themeIcon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-inner container">
+    <div class="avatar" role="img" aria-label="Portrait de Khaled Bahroun"></div>
+    <div class="kicker">Formateur Expert · Énergétique</div>
+    <h1>Khaled Bahroun</h1>
+    <p class="role">Expert en froid commercial, climatisation, photovoltaïque et maintenance des équipements de cuisines professionnelles &amp; hôtelières.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-accent">Contactez-moi »</a>
+      <a href="#apropos" class="btn btn-light">À propos de moi</a>
+    </div>
+  </div>
+  <a href="#apropos" class="scroll-ind" aria-label="Défiler">
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- ABOUT -->
+<section id="apropos">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-portrait reveal" role="img" aria-label="Portrait de Khaled Bahroun">
+        <div class="exp-badge"><b>+24</b><span>Ans d'expérience</span></div>
+      </div>
+      <div class="about-text reveal">
+        <span class="eyebrow">À propos de moi</span>
+        <h2 style="font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:18px">Un savoir-faire technique au service de la <span style="color:var(--accent)">formation</span></h2>
+        <p>Depuis 2001, je suis formateur à l'Agence Tunisienne de la Formation Professionnelle, affecté au Centre Sectoriel de Formation en Énergétique de Djerba. Titulaire d'un Mastère Professionnel en Management industriel des équipements hôteliers, j'allie l'expérience du terrain à la pédagogie.</p>
+        <p>Mon expertise couvre les cuisines professionnelles, le froid commercial, la climatisation individuelle et les installations photovoltaïques. Je suis certifié pour la manipulation des fluides frigorigènes (catégorie 1).</p>
+        <div class="about-info">
+          <div class="row"><span class="k">Nom complet</span><span class="v">Bahroun Khaled</span></div>
+          <div class="row"><span class="k">Nationalité</span><span class="v">Tunisienne</span></div>
+          <div class="row"><span class="k">Année de naissance</span><span class="v">1977</span></div>
+          <div class="row"><span class="k">Localisation</span><span class="v">Djerba, Tunisie</span></div>
+          <div class="row"><span class="k">Employeur</span><span class="v">ATFP — CSFE Djerba</span></div>
+          <div class="row"><span class="k">Langues</span><span class="v">Arabe · Français</span></div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Contactez-moi »</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--surface-2)">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Ce que je propose</span>
+      <h2>Mes <span>Services</span></h2>
+      <p>Six domaines d'expertise technique couvrant l'ensemble des équipements énergétiques des cuisines et établissements hôteliers.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal"><span class="num">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-9a4 4 0 0 1 8 0m-8 0h8m4 9v-9a4 4 0 0 1 4 0"/><path d="M6 7V4M9 7V4"/></svg></div>
+        <h3>Cuisson gaz &amp; électrique</h3>
+        <p>Installation et maintenance des équipements de cuisson à gaz et électriques des cuisines professionnelles.</p>
+      </div>
+      <div class="card reveal"><span class="num">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5 19 19M19 5l-2.5 2.5M7.5 16.5 5 19"/></svg></div>
+        <h3>Équipements électromécaniques</h3>
+        <p>Diagnostic et entretien des équipements électromécaniques des cuisines professionnelles.</p>
+      </div>
+      <div class="card reveal"><span class="num">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg></div>
+        <h3>Froid commercial</h3>
+        <p>Chambres froides positives et négatives : installation, dépannage et maintenance préventive.</p>
+      </div>
+      <div class="card reveal"><span class="num">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="8" rx="2"/><path d="M6 18h.01M10 18h.01M14 18h.01M18 18h.01M6 21h.01M14 21h.01"/></svg></div>
+        <h3>Climatisation individuelle</h3>
+        <p>Montage, mise en service et dépannage des climatiseurs individuels et split-systems.</p>
+      </div>
+      <div class="card reveal"><span class="num">05</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Énergie photovoltaïque</h3>
+        <p>Installation et maintenance des systèmes photovoltaïques raccordés et non raccordés au réseau.</p>
+      </div>
+      <div class="card reveal"><span class="num">06</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9 9 0 0 1 9 9M12 12l4-2"/><circle cx="12" cy="12" r="2"/><path d="M12 21a9 9 0 0 0 6.3-2.6"/></svg></div>
+        <h3>Fluides frigorigènes</h3>
+        <p>Manipulation certifiée des fluides frigorigènes catégorie 1 et bonnes pratiques environnementales.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="competences">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Mon expertise</span>
+      <h2>Compétences <span>Spéciales</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill reveal"><div class="top"><span>Froid commercial &amp; chambres froides</span><span>95%</span></div><div class="bar"><i data-w="95%"></i></div></div>
+      <div class="skill reveal"><div class="top"><span>Maintenance équipements de cuisine</span><span>98%</span></div><div class="bar"><i data-w="98%"></i></div></div>
+      <div class="skill reveal"><div class="top"><span>Climatisation &amp; CVC</span><span>92%</span></div><div class="bar"><i data-w="92%"></i></div></div>
+      <div class="skill reveal"><div class="top"><span>Systèmes photovoltaïques</span><span>90%</span></div><div class="bar"><i data-w="90%"></i></div></div>
+      <div class="skill reveal"><div class="top"><span>Ingénierie &amp; animation de formation</span><span>96%</span></div><div class="bar"><i data-w="96%"></i></div></div>
+      <div class="skill reveal"><div class="top"><span>Gestion des risques électriques</span><span>88%</span></div><div class="bar"><i data-w="88%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section id="parcours" style="background:var(--surface-2)">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Mon parcours</span>
+      <h2>Éducation &amp; <span>Expérience</span></h2>
+      <p>Un parcours académique et professionnel construit autour de la maintenance industrielle et énergétique.</p>
+    </div>
+    <div class="timeline-wrap">
+      <div class="tl-col reveal">
+        <h3><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></span>Mon éducation</h3>
+        <div class="timeline">
+          <div class="tl-item"><span class="when">2018 – 2020</span><h4>Mastère Professionnel — Management industriel des équipements hôteliers</h4><div class="where">ISET de Djerba</div></div>
+          <div class="tl-item"><span class="when">2016</span><h4>Licence — Maintenance industrielle</h4><div class="where">ISET de Médenine</div></div>
+          <div class="tl-item"><span class="when">1997 – 2000</span><h4>Technicien supérieur — Génie mécanique</h4><div class="where">ISET de Gabès</div></div>
+          <div class="tl-item"><span class="when">1996 – 1997</span><h4>Baccalauréat technique</h4><div class="where">Lycée technique de Houmt Souk, Djerba</div></div>
+        </div>
+      </div>
+      <div class="tl-col reveal">
+        <h3><span class="ic"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>Expérience professionnelle</h3>
+        <div class="timeline">
+          <div class="tl-item"><span class="when">Depuis 2001</span><h4>Formateur en énergétique</h4><div class="where">Agence Tunisienne de la Formation Professionnelle — CSF en énergétique de Djerba</div></div>
+          <div class="tl-item"><span class="when">2000 – 2001</span><h4>Stage d'initiation à la vie professionnelle (SIVP)</h4><div class="where">Agence Tunisienne de la Formation Professionnelle</div></div>
+          <div class="tl-item"><span class="when">2008 · 2014 · 2016</span><h4>Études &amp; consultations — Diplôme TMECPB</h4><div class="where">Homologation, programme d'étude &amp; guide pédagogique · CSFE Djerba &amp; CENAFFIF</div></div>
+          <div class="tl-item"><span class="when">2024 – 2025</span><h4>Encadrement de projets de fin d'études (PFE)</h4><div class="where">Photovoltaïque, automatisation industrielle &amp; climatisation · CSFE de Djerba</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:60px">
+      <div class="sec-head center reveal" style="margin-bottom:36px"><h2 style="font-size:clamp(1.6rem,3.4vw,2.2rem)">Formations complémentaires &amp; <span>certifications</span></h2></div>
+      <div class="form-grid">
+        <div class="form-item reveal"><span class="yr">2008</span><div class="txt"><b>Maintenance des chaudières murales à gaz</b><span>CSFE de Kairouan</span></div></div>
+        <div class="form-item reveal"><span class="yr">2008</span><div class="txt"><b>Les humidificateurs</b><span>CSFE de Djerba</span></div></div>
+        <div class="form-item reveal"><span class="yr">2012</span><div class="txt"><b>Installations intérieures gaz &amp; appareils d'utilisation</b><span>Centre de perfectionnement de Khlédia (STEG)</span></div></div>
+        <div class="form-item reveal"><span class="yr">2013</span><div class="txt"><b>Kit photovoltaïque raccordé au réseau</b><span>CSFE en énergétique de Djerba</span></div></div>
+        <div class="form-item reveal"><span class="yr">2018–2028</span><div class="txt"><b>Attestation d'aptitude fluide frigorigène — catégorie 1</b><span>Bureau VERITAS</span></div></div>
+        <div class="form-item reveal"><span class="yr">2022</span><div class="txt"><b>Systèmes photovoltaïques raccordés au réseau (PVRR)</b><span>CSFE en énergétique de Djerba</span></div></div>
+        <div class="form-item reveal"><span class="yr">2024</span><div class="txt"><b>PV d'électrification rurale &amp; éclairage public (30h)</b><span>CSFE en énergétique de Djerba</span></div></div>
+        <div class="form-item reveal"><span class="yr">2024</span><div class="txt"><b>Systèmes de pompage photovoltaïques (30h)</b><span>CSFE en énergétique de Djerba</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section id="galerie">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Réalisations</span>
+      <h2>Ma <span>Galerie</span></h2>
+      <p>Interventions et actions de formation au sein d'hôtels, écoles hôtelières et centres de formation à travers la Tunisie.</p>
+    </div>
+    <div class="gallery">
+      <div class="tile t1 reveal"><div class="cap"><b>Froid &amp; chambres froides</b><span>Hôtels Odyssée, Venice Beach…</span></div></div>
+      <div class="tile t2 reveal"><div class="cap"><b>Climatisation</b><span>Montage &amp; dépannage climatiseurs</span></div></div>
+      <div class="tile t3 reveal"><div class="cap"><b>Cuisines professionnelles</b><span>Cuisson gaz &amp; électrique</span></div></div>
+      <div class="tile t4 reveal"><div class="cap"><b>Photovoltaïque &amp; énergie</b><span>Installations &amp; économie d'énergie</span></div></div>
+    </div>
+    <div class="realis reveal">
+      <h3>Établissements &amp; organismes accompagnés</h3>
+      <ul>
+        <li>Hôtel Karthago — équipements de cuisine (2007)</li>
+        <li>École hôtelière de Djerba — cuisson, préparation &amp; froid (2014)</li>
+        <li>Hôtel Lella Meriem — équipements de buanderie (2015)</li>
+        <li>Société COGEF — cuisson électrique (2019)</li>
+        <li>Hôtel Eden Star — équipements de buanderie (2019)</li>
+        <li>World Pro Djerba — montage &amp; dépannage climatiseurs (2021)</li>
+        <li>Hôtel Jaz Tour Khalef, Sousse — cuisson &amp; énergie (2022–2025)</li>
+        <li>Marhaba Hôtels, Sousse — équipements de cuisson (2023)</li>
+        <li>Thon Manar, Zarzis — gestion des risques électriques (2024)</li>
+        <li>Hôtel Odyssée — froid, clim, cuisine, buanderie, PV (2024)</li>
+        <li>Hôtel Djerba Beach — cuisine &amp; buanderie (2025)</li>
+        <li>Hôtel Monarque Dar Djerba — technique de maintenance (60h, 2025)</li>
+        <li>Hôtel Venise Beach, Djerba — maintenance préventive &amp; curative (2025)</li>
+        <li>Hôtel Steigenberger Marhaba, Nabeul — cuisine &amp; énergie (2026)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--surface-2)">
+  <div class="container">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Restons en contact</span>
+      <h2>Entrer en <span>Contact</span></h2>
+      <p>Formation, expertise technique ou maintenance d'équipements — n'hésitez pas à me contacter.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="cline">
+          <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+          <div><b>Email</b><a href="mailto:khaledbahroun@yahoo.fr">khaledbahroun@yahoo.fr</a></div>
+        </div>
+        <div class="cline">
+          <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span>
+          <div><b>Téléphone</b><a href="tel:+21658480785">+216 58 48 07 85</a></div>
+        </div>
+        <div class="cline">
+          <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0-8-4.9L3 21l4.9-1a9 9 0 0 0 4.1 1Z"/><path d="M8.5 9.5c0 3 2 5 5 5.5l1-1.2c.3-.4.9-.5 1.3-.2l1.3.7c.4.2.6.7.4 1.1-.5 1-1.7 1.4-2.9 1.1-2.9-.7-5.6-3.4-6.3-6.3-.3-1.2.1-2.4 1.1-2.9.4-.2.9 0 1.1.4l.7 1.3c.3.4.2 1-.2 1.3l-1.3 1Z"/></svg></span>
+          <div><b>WhatsApp</b><a href="https://wa.me/21658480785" target="_blank" rel="noopener">+216 58 48 07 85</a></div>
+        </div>
+        <div class="cline">
+          <span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><b>Localisation</b><span>Djerba, Tunisie — CSFE en énergétique</span></div>
+        </div>
+      </div>
+      <form onsubmit="return handleSubmit(event)">
+        <div class="two">
+          <div class="field"><label for="name">Nom complet</label><input id="name" type="text" placeholder="Votre nom" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="vous@email.com" required></div>
+        </div>
+        <div class="field"><label for="subject">Sujet</label><input id="subject" type="text" placeholder="Objet de votre demande"></div>
+        <div class="field"><label for="msg">Message</label><textarea id="msg" placeholder="Décrivez votre besoin en formation ou maintenance…" required></textarea></div>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Envoyer le message »</button>
+        <p class="form-note">Votre message ouvrira votre logiciel de messagerie vers khaledbahroun@yahoo.fr.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a href="#contact" class="fab" aria-label="Me contacter">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+  <span class="fab-txt">Contactez-moi</span>
+</a>
+
+<footer>
+  <div class="container foot">
+    <div>© <span id="yr"></span> Khaled Bahroun — Formateur Expert en énergétique.</div>
+    <div class="socials">
+      <a href="mailto:khaledbahroun@yahoo.fr" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
+      <a href="https://wa.me/21658480785" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0-8-4.9L3 21l4.9-1a9 9 0 0 0 4.1 1Z"/></svg></a>
+      <a href="tel:+21658480785" aria-label="Téléphone"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.documentElement.classList.add('js-ready');
+const root=document.documentElement, tBtn=document.getElementById('themeBtn'), tIcon=document.getElementById('themeIcon');
+const moon='<path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path>';
+const sun='<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>';
+function setTheme(t){root.setAttribute('data-theme',t);tIcon.innerHTML=t==='dark'?moon:sun;try{localStorage.setItem('kb-theme',t)}catch(e){}}
+let savedTheme=null; try{savedTheme=localStorage.getItem('kb-theme')}catch(e){}
+setTheme(savedTheme || (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+tBtn.onclick=()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');
+
+const menuBtn=document.getElementById('menuBtn'), navLinks=document.getElementById('navLinks');
+menuBtn.onclick=()=>navLinks.classList.toggle('open');
+navLinks.querySelectorAll('a').forEach(a=>a.onclick=()=>navLinks.classList.remove('open'));
+
+addEventListener('scroll',()=>document.querySelector('header').classList.toggle('scrolled',scrollY>10));
+
+// smooth scroll to anchors with sticky-header offset
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+  link.addEventListener('click',e=>{
+    const id=link.getAttribute('href');
+    if(id.length<2)return;
+    const target=document.querySelector(id);
+    if(!target)return;
+    e.preventDefault();
+    navLinks.classList.remove('open');
+    const top=target.getBoundingClientRect().top+window.pageYOffset-78;
+    window.scrollTo({top,behavior:'smooth'});
+    history.replaceState(null,'',id);
+  });
+});
+
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');
+  e.target.querySelectorAll('.bar > i').forEach(b=>b.style.width=b.dataset.w);io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+function handleSubmit(e){e.preventDefault();
+  const n=name.value,em=email.value,s=(subject.value||'Contact depuis le site'),m=msg.value;
+  location.href=`mailto:khaledbahroun@yahoo.fr?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(m+'\n\n— '+n+' ('+em+')')}`;
+  return false;}
+</script>
+</body>
+</html>
